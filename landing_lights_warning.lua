@@ -18,14 +18,15 @@ local warning_box_height = 15
 show_taxi_light_warning_box = 0
 warning_text = ""
 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 function check_landing_lights()
 	
 	if xp_gear_handle_status == 1 then 
 		show_taxi_light_warning_box = 0
-	elseif xp_landing_lights_on == 1 and xp_altitude_pilot > 95000 then
+	elseif xp_landing_lights_on == 1 and xp_altitude_pilot > 9900 then
 		show_taxi_light_warning_box = 1
 		warning_text = "landing lights ON"
-	elseif xp_landing_lights_on == 0 and xp_altitude_pilot < 105000 then
+	elseif xp_landing_lights_on == 0 and xp_altitude_pilot < 10100 then
 		show_taxi_light_warning_box = 1
 		warning_text = "landing lights OFF"
 	else
@@ -34,6 +35,7 @@ function check_landing_lights()
 
 end
 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 function draw_warning_box()
 
 	if show_taxi_light_warning_box == 1 then	
