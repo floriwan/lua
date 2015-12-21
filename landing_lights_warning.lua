@@ -10,8 +10,8 @@ DataRef( "xp_landing_lights_on", "sim/cockpit/electrical/landing_lights_on", "re
 DataRef( "xp_altitude_pilot", "sim/cockpit2/gauges/indicators/altitude_ft_pilot", "readonly" )
 DataRef( "xp_gear_handle_status", "sim/cockpit/switches/gear_handle_status", "readonly")
 
-local landing_lights_on_ft = 10500		-- below this altitude, get a warning message to turn the landing lights on
-local landing_lights_off_ft = 9500		-- warning altitude to turn landing lights off during climb
+local landing_lights_on_ft = 11000		-- below this altitude, get a warning message to turn the landing lights on
+local landing_lights_off_ft = 9000		-- warning altitude to turn landing lights off during climb
 
 local warning_box_height = 21
 local warning_box_width = 140
