@@ -46,7 +46,7 @@ function check_landing_lights()
 	elseif flight_state == "cl" and xp_altitude_pilot > landing_lights_off_ft and xp_landing_lights_on == 1 then
 		show_taxi_light_warning_box = 1
 		warning_text = "turn landing lights OFF"
-	elseif xp_altitude_pilot < landing_lights_on_ft and xp_landing_lights_on == 0 then
+	elseif flight_state ~= "cl" and xp_altitude_pilot < landing_lights_on_ft and xp_landing_lights_on == 0 then
 		show_taxi_light_warning_box = 1
 		warning_text = "turn landing lights ON"
 	else
