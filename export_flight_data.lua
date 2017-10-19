@@ -16,7 +16,7 @@ function dump_data()
 	speed = string.format("%03d", groundspeed * 1.94384) -- meter/sec to kts
 
 	if old_altitude ~= altitude or old_speed ~= speed then
-		out_string = "X-Plane 11 / ground speed: " .. speed .. "kts vertical speed: " .. vertical_speed .. "ft/m altitude: " .. altitude .. "ft"
+		out_string = "ground speed: " .. speed .. "kts  altitude: " .. altitude .. "ft"
 	
 		alt_file = io.open(OUTPUT_DIR .. FL_FILE, 'w')
 		alt_file:write(out_string)
